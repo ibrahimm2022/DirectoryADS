@@ -1,0 +1,144 @@
+.header {
+  height: 60vh;
+}
+/* Start Blog */
+.blogs {
+  padding-top: var(--padding);
+}
+.blogs .blog-container {
+  display: flex;
+  gap: 10%;
+  flex-wrap: wrap;
+}
+.blogs .blog-container .blog-item {
+  display: flex;
+  gap: 3%;
+  flex-basis: 60%;
+  flex-wrap: wrap;
+}
+.blogs .blog-container .box {
+  display: grid;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-basis: calc(97% / 2);
+}
+.blogs .blog-container .box .box-img {
+  height: 250px;
+}
+.blogs .blog-container .box img {
+  width: 100%;
+  height: 100%;
+}
+
+.blogs .blog-container .box .info .blog-link {
+  text-transform: capitalize;
+  color: #000;
+  font-size: 22px;
+  margin-bottom: 15px;
+  display: block;
+}
+.blogs .blog-container .box .info .list {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+.blogs .blog-container .box li {
+  position: relative;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.blogs .blog-container .box li:not(:last-child) {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 300;
+}
+.blogs .blog-container .box li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  height: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  width: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.blogs .blog-container .box .text {
+  padding-right: 15px;
+}
+.blogs .blog-container .box p {
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+}
+.blogs .blog-container .blog-btn {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.blogs .blog-container .blog-btn .list {
+  display: flex;
+  gap: 15px;
+}
+.blogs .blog-container .blog-btn li {
+  border-radius: 50%;
+  background: var(--blue);
+  width: 40px;
+  height: 40px;
+  text-transform: capitalize;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+.blogs .blog-container .blog-btn li.active,
+.blogs .blog-container .blog-btn li.another {
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.blogs .blog-container .blog-control {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex-basis: 30%;
+}
+.blogs .blog-container .blog-control h4 {
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.blogs .blog-container .blog-control .search input {
+  width: 100%;
+  padding: 10px 5px;
+  outline: none;
+}
+.blogs .blog-container .blog-control .list li {
+  margin-bottom: 10px;
+}
+
+.blogs .blog-container .blog-control a {
+  color: var(--blue);
+  transition: 0.5s;
+}
+.blogs .blog-container .blog-control .list a:hover {
+  color: var(--indigo);
+}
+.blogs .blog-container .blog-control em {
+  margin: 0 10px;
+}
+@media (max-width: 991px) {
+  .blogs .blog-container .box {
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .blogs .blog-container .box {
+    flex-basis: 100%;
+  }
+  .blogs .blog-container .blog-item,
+  .blogs .blog-container .blog-control {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}
+/* End Blog */

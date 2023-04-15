@@ -1,0 +1,152 @@
+header {
+  height: 60vh;
+}
+/* Strat Why Us */
+.why-us {
+  padding: var(--padding) 0;
+  background-color: var(--sec-clr);
+}
+.why-us .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+  margin-bottom: 25px;
+}
+.why-us .row .img {
+  flex-basis: 55%;
+  display: flex;
+  align-items: center;
+}
+.why-us .row .img img {
+  width: 100%;
+}
+
+.why-us .row .text {
+  flex-basis: 40%;
+}
+.why-us .row .text h2 {
+  color: var(--indigo);
+  text-transform: capitalize;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.why-us .row .text p {
+  margin-bottom: 20px;
+  line-height: 2;
+}
+.why-us .row .text li {
+  margin-bottom: 15px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.why-us .row .text li ion-icon {
+  color: var(--blue);
+}
+.why-us .row:nth-child(1) {
+  border-bottom: 1px solid var(--indigo);
+  padding-bottom: 25px;
+}
+.why-us .row:nth-child(2) .img {
+  flex-basis: 70%;
+}
+.why-us .row:nth-child(2) .text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-basis: 100%;
+  margin-top: 30px;
+  gap: 30px;
+}
+.why-us .row:nth-child(2) .text .box {
+  width: 35%;
+}
+.why-us .row:nth-child(2) .text a {
+  text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .why-us .row {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .why-us .row:nth-child(2) .text {
+    margin: 0;
+  }
+  .why-us .row:nth-child(2) .text .box {
+    width: 100%;
+  }
+}
+/* End Why Us */
+
+/* Start Our Team */
+.our-team {
+  padding-top: var(--padding);
+}
+.our-team .title {
+  padding-bottom: 30px;
+}
+.our-team .title h2 {
+  color: var(--indigo);
+  position: relative;
+  width: fit-content;
+  text-transform: capitalize;
+}
+.our-team .title h2:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--indigo);
+}
+.our-team .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3%;
+}
+
+.our-team .row .box {
+  flex-basis: calc(91% / 4);
+  display: grid;
+  gap: 20px;
+}
+.our-team .row .box img {
+  width: 100%;
+  transform: scale(1);
+  transition: 0.5s;
+}
+.our-team .row .box .main-info h4 {
+  text-transform: capitalize;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+  font-size: 19px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.our-team .row .box .main-info span {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: var(--blue);
+  font-weight: 300;
+}
+.our-team .row .box .sec-info p {
+  line-height: 1.5;
+}
+@media (max-width: 991px) {
+  .our-team .row .box {
+    flex-basis: calc(97% / 2);
+  }
+}
+@media (max-width: 767px) {
+  .our-team .row .box {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+}
+/* End Our Team */
+.testimonials {
+  background: var(--sec-clr);
+}

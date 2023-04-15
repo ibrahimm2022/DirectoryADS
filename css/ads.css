@@ -1,0 +1,247 @@
+header {
+  height: 60vh;
+}
+/* Start Filter */
+.filter {
+  padding-top: var(--padding);
+}
+.filter .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.filter .filter-items {
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  flex-basis: 65%;
+}
+.filter .filter-items .box {
+  width: 48%;
+  border-radius: 7px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 9px 0px rgb(0 0 0 / 38%);
+}
+.filter .filter-items .img-link {
+  width: 100%;
+  display: block;
+  height: 190px;
+  background: #000 var(--img) no-repeat;
+  background-size: cover;
+}
+
+.filter .filter-items .content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.filter .filter-items .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter .filter-items .title p {
+  padding: 10px 15px;
+  border-radius: 30px;
+  background: #e9ecef;
+}
+.filter .filter-items .title ion-icon {
+  font-size: 29px;
+  color: var(--indigo);
+}
+.filter .filter-items .info h4 {
+  color: var(--blue);
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 20px;
+}
+.filter .filter-items .info p {
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.filter .filter-items .rate .rate-list {
+  display: flex;
+  gap: 6px;
+}
+.filter .filter-items .rate li ion-icon {
+  color: #f89d13;
+}
+
+.filter .filter-items .rate li:nth-of-type(5) ion-icon {
+  color: #ccc;
+}
+.filter .filter-items .filter-btn {
+  width: 100%;
+  padding: 30px 0;
+  display: grid;
+  place-items: center;
+}
+.filter .filter-items .filter-btn .list {
+  display: flex;
+  gap: 10px;
+}
+.filter .filter-items .filter-btn li {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-transform: capitalize;
+  padding: 5px;
+  color: #fff;
+  background-color: var(--indigo);
+  cursor: pointer;
+}
+.filter .filter-items li.active {
+  background: #e6e6e6;
+  color: #000;
+}
+.filter .filter-items li.another {
+  background: transparent;
+  color: #000;
+  font-size: 22px;
+}
+.filter .filter-control {
+  width: 30%;
+}
+.filter .form {
+  display: grid;
+  gap: 40px;
+  padding: 30px 20px;
+  font-size: 20px;
+}
+.filter .filter-control .locat {
+  display: grid;
+  gap: 20px;
+}
+.filter .filter-control h5 {
+  font-weight: normal;
+  text-transform: capitalize;
+  font-size: 22px;
+  color: var(--blue);
+}
+.filter .filter-control .check label {
+  display: inline-block;
+}
+.filter .filter-control select,
+.filter .filter-control input:not([type="range"]) {
+  padding: 10px;
+  outline: transparent;
+  border: 1px solid #ced4da;
+  text-transform: capitalize;
+}
+.filter .filter-control select option {
+  text-transform: capitalize;
+}
+.filter .filter-control .checker {
+  display: grid;
+  gap: 7px;
+}
+input[type="range"] {
+  width: 100%;
+  height: 8px;
+  border-radius: 16px;
+  position: relative;
+  display: block;
+  outline: none;
+  appearance: none;
+  background-color: #ccc;
+  margin-top: 15px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  --webkit-appearance: none;
+  appearance: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  border: 3px solid #fff;
+  margin-top: -12px;
+}
+input[type="range"]:active::-webkit-slider-thumb {
+  background-color: #fff;
+  border: 3px solid var(--indigo);
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  --webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 8px;
+}
+.filter .range {
+  position: relative;
+}
+.filter .text {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  color: var(--indigo);
+  box-shadow: inset 2px 5px 5px rgba(0, 0, 0, 0.05),
+    2px 1px 20px rgba(0, 0, 0, 0.05), -3px 5px 30px rgba(0, 0, 0, 0.05),
+    inset 4px 4px 20px rgba(255, 255, 255.9);
+  padding: 11px;
+  border-radius: 52% 48% 33% 67% / 38% 45% 55% 62%;
+  display: grid;
+  place-items: center;
+  width: fit-content;
+  font-size: 22px;
+  transition: 0.5s;
+  background-color: #effef4;
+}
+.filter .text:hover {
+  border-radius: 50%;
+}
+.filter .text::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  bottom: 5px;
+}
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+}
+.filter .filter-control .info h5 {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--indigo);
+  transition: 0.5s;
+}
+.filter .filter-control .info h5:hover {
+  color: var(--blue);
+}
+.filter .filter-control .info p {
+  line-height: 1.5;
+  margin-top: 17px;
+  transform: rotateX(90deg) translatey(100px);
+  transform-origin: top;
+  transition: 0.5s linear;
+}
+.filter .filter-control p.active {
+  transform: rotateX(0deg) translatey(0);
+}
+.filter #output {
+  text-transform: capitalize;
+  color: var(--indigo);
+}
+@media (max-width: 991px) {
+  .filter .filter-control,
+  .filter .filter-items {
+    flex-basis: 100%;
+  }
+  .filter .filter-items {
+    order: 2;
+  }
+}
+@media (max-width: 767px) {
+  .filter .filter-items .box {
+    width: 100%;
+  }
+}
+/* End Filter */
